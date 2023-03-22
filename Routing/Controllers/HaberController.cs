@@ -15,8 +15,10 @@ namespace Routing.Controllers
             return View();
         }
         [Route("HavaDurumu")]
-        public IActionResult HavaDurumu()
+        [Route("HavaDurumu/{sehir?}")]
+        public IActionResult HavaDurumu(int? sehir)
         {
+            ViewBag.Sehir = sehir;
             return View();
         }
         [Route("SporHaberleri")]
